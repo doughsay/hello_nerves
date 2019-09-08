@@ -31,7 +31,7 @@ config :nerves_firmware_ssh,
 node_name = if Mix.env() != :prod, do: "hello_nerves"
 
 config :nerves_init_gadget,
-  ifname: "usb0",
+  ifname: "bond0",
   address_method: :dhcpd,
   mdns_domain: "nerves.local",
   node_name: node_name,

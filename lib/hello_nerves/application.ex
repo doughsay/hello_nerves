@@ -30,13 +30,10 @@ defmodule HelloNerves.Application do
   end
 
   def children(_target) do
-    opts = InitGadget.Options.get()
-
     [
       # Children for all targets except host
       # Starts a worker by calling: HelloNerves.Worker.start_link(arg)
       # {HelloNerves.Worker, arg},
-      {HelloNerves.GadgetDevices, opts}
     ]
   end
 
